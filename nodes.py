@@ -7,12 +7,7 @@ class OpenAIGPTNode:
             "required": {
                 "api_key": ("STRING", {"default": ""}),
                 "text_prompt": ("STRING", {"multiline": True}),
-                "model": ([
-                    "gpt-4o", "gpt-4-turbo", "gpt-3.5-turbo",
-                    "deepseek-chat", "deepseek-coder",
-                    "google-gemini-pro", "google-gemini-1.5-pro",
-                    "qwen-turbo", "qwen-plus", "qwen-max"
-                ], {"default": "gpt-4o"}),
+                "model": ("STRING", {"default": "gpt-4o"}),
                 "temperature": ("FLOAT", {"default": 0.5, "min": 0.0, "max": 1.0, "step": 0.01}),
                 "max_tokens": ("INT", {"default": 2048, "min": 128, "max": 4096}),
                 "detail_mode": (["high", "low"], {"default": "high"}),
